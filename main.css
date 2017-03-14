@@ -1,0 +1,234 @@
+html, body {
+  font-size: 16px;
+  align-items: center;
+}
+
+body {
+    position: relative;
+    background-color: grey;
+    font-size: 18px;
+    font-family: arial;
+    align-items: center;
+}
+
+#h1 {
+  font-size: 50px;
+  font-family: arial;
+}
+
+li {
+  border: 1px solid black;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+}
+
+.buttons {
+  position: relative;
+  background-color: black;
+  border: 1px solid black;
+  height: 40rem;
+  width: 30rem;
+  border-radius: 15px;
+  align-items: center;
+}
+
+.clear {
+  background-color: lightgrey;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 35px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.plus-minus {
+  background-color: lightgrey;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.percentage {
+  background-color: lightgrey;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.operator-divide {
+  background-color: orange;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.number-seven {
+  background-color: white;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.number-eight {
+  background-color: white;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.number-nine {
+  background-color: white;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.operator-multiply {
+  background-color: orange;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.operator-divide {
+  background-color: orange;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.number-four {
+  background-color: white;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.number-five {
+  background-color: white;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.number-six {
+  background-color: white;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.operator-minus {
+  background-color: orange;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.number-one {
+  background-color: white;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.number-two {
+  background-color: white;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.number-three {
+  background-color: white;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.operator-plus {
+  background-color: orange;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.number-zero {
+  background-color: white;
+  height: 6rem;
+  width: 12.5rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.operator-dot {
+  background-color: white;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.operator-equation {
+  background-color: orange;
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 2px;
+}
