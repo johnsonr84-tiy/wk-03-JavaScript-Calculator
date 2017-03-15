@@ -4,7 +4,6 @@ html, body {
 }
 
 body {
-    position: relative;
     background-color: grey;
     font-size: 18px;
     font-family: arial;
@@ -16,219 +15,236 @@ body {
   font-family: arial;
 }
 
-li {
-  border: 1px solid black;
-  height: 6rem;
-  width: 6rem;
-  text-align: center;
+.row1, .row2, .row3, .row4, .row5 {
+  position: relative;
+  float: center;
+  align-items: center;
 }
 
-.buttons {
-  position: relative;
+#calc {
   background-color: black;
   border: 1px solid black;
-  height: 40rem;
-  width: 30rem;
+  height: 37rem;
+  width: 24rem;
   border-radius: 15px;
   align-items: center;
 }
 
-.clear {
+.buttons {
+  position: relative;
+  text-align: center;
+  align-items: center;
+}
+
+#display {
+  position: relative;
+  background-color: white;
+  border: 1px solid orange;
+  font-size: 40px;
+  text-align: right;
+  height: 5rem;
+  width: 21rem;
+  border-radius: 15px;
+  align-items: center;
+  top: 1rem;
+  /*left: 1.25rem;*/
+}
+
+#clear {
   background-color: lightgrey;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   font-size: 35px;
   border-radius: 10px;
-  margin: 2px;
 }
 
-.plus-minus {
+#plusMinus {
   background-color: lightgrey;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 0px;
 }
 
-.percentage {
+#percentage {
   background-color: lightgrey;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 0px;
 }
 
-.operator-divide {
+#operatorDivide {
   background-color: orange;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 0px;
 }
 
-.number-seven {
+#numberSeven {
   background-color: white;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 0px;
 }
 
-.number-eight {
+#numberEight {
   background-color: white;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 0px;
 }
 
-.number-nine {
+#numberNine {
   background-color: white;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 0px;
 }
 
-.operator-multiply {
+#operatorMultiply {
   background-color: orange;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 0px;
 }
 
-.operator-divide {
+#operatorDivide {
   background-color: orange;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 0px;
 }
 
-.number-four {
+#numberFour {
   background-color: white;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 0px;
 }
 
-.number-five {
+#numberFive {
   background-color: white;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 0px;
 }
 
-.number-six {
+#numberSix {
   background-color: white;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 0px;
 }
 
-.operator-minus {
+#operatorMinus {
   background-color: orange;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 0px;
 }
 
-.number-one {
+#numberOne {
   background-color: white;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 0px;
 }
 
-.number-two {
+#numberTwo {
   background-color: white;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 0px;
 }
 
-.number-three {
+#numberThree {
   background-color: white;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 0px;
 }
 
-.operator-plus {
+#operatorPlus {
   background-color: orange;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 0px;
 }
 
-.number-zero {
+#numberZero {
   background-color: white;
-  height: 6rem;
-  width: 12.5rem;
+  height: 5rem;
+  width: 10.5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 0px;
 }
 
-.operator-dot {
+#operatorDot {
   background-color: white;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 0px;
 }
 
-.operator-equation {
+#operatorEquation {
   background-color: orange;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
-  margin: 2px;
+  margin: 0px;
 }
