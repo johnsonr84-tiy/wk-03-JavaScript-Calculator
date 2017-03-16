@@ -1,69 +1,107 @@
-/*Simple Functions*/
 
-function addNum (num1, num2) {
-  var sum = num1 + num2;
-  sum = Math.floor(sum *10000000000)/10000000000;
-  console.log(sum);
-  return sum;
-}
+var savedNumber = undefined
+var shouldReset = false
+var operation = ""
 
-function subtNum (num1, num2) {
-  var answer = parseFloat(num1 - num2);
-  sum = Math.floor(answer *10000000000)/10000000000;
-  console.log(answer);
-  return answer;
-}
-
-function multNum (num1, num2) {
-  let product = parseFloat(num1 * num2);
-  sum = Math.floor(product *10000000000)/10000000000;
-  console.log(product);
-  return product;
-}
-
-function divNum (num1, num2) {
-  if (num2 ===0) {return "illegal divide by zero request"};
-  let quotient = parseFloat(num1 / num2);
-  quotient = Math.floor(quotient *10000000000)/10000000000;
-  console.log(product);
-  return quotient;
-}
-
-function modulus (num1, num2) {
-  let result = parseFloat(num1 % num2);
-  result = Math.floor(result *10000000000)/10000000000;
-  console.log(result);
-  return result;
-}
-
-
-
-// DOM manipulation
-  function onLoad () {
-    var buttonNodeList = document.querySelectorAll("button");
-    console.log(buttonNodeList)
+function clickedNumber(x) {
+  let display = document.getElementById("display");
+  if(shouldReset) {
+    shouldReset = false
+    display.innerHTML = ""
   }
-    window.onload = onLoad;
-    console.log('script loaded');
+  let value = display.innerHTML
+  display.innerHTML = value + x.toString()
+}
+
+function doOperation() {
+  let display = document.getElementById("display");
+  let currentNumber = parseInt(display.innerHTML);
+
+  if(operation === "") {
+    savedNumber = currentNumber
+  }
+  else if(operation === "add") {
+    console.log("adding")
+    savedNumber = savedNumber + currentNumber;
+  }
+  else if(operation === "multiply") {
+    console.log("adding")
+    savedNumber = savedNumber * currentNumber;
+  }
+  display.innerHTML = savedNumber
+  shouldReset = true;
+}
+
+function clickedDivide() {
+  if(shouldReset) {
+    operation = "divide";
+    return
+  }
+
+  doOperation();
+  operation = "divide";
+}
+
+function clickedMinus() {
+  if(shouldReset) {
+    operation = "minus";
+    return
+  }
+
+  doOperation();
+  operation = "minus";
+}
+
+function clickedPlus() {
+  if(shouldReset) {
+    operation = "add";
+    return
+  }
+
+  doOperation();
+  operation = "add";
+}
+
+function clickedTimes() {
+  if(shouldReset) {
+    operation = "multiply";
+    return
+  }
+
+  doOperation();
+  operation = "multiply";
+}
+
+function clickedEquals() {
+  if(shouldReset) {
+    operation = "";
+    return
+  }
+
+  doOperation();
+  operation = "";
+}
 
 
+for(let i = 0; i <= 9; i++) {
+  let id = "number" + i;
+  let button = document.getElementById(id);
+  button.addEventListener("click", function() {
+    clickedNumber(i)
+  });
+}
 
+let plusButton = document.getElementById("operatorPlus");
+plusButton.addEventListener("click", function() {
+  clickedPlus();
+});
 
+let timesButton = document.getElementById("operatorMultiply");
+timesButton.addEventListener("click", function() {
+  clickedTimes();
+});
 
-  // var numberone = document.getElementById("numberone");
-  //
-  // numberone.addEventListener("click", function () {
-  //   console.log("1");
-  // })
-
-  // var clear = document.getElementById("clear");
-  // console.log(clear)
-  //
-  // clear.addEventListener("click", function () {
-  //   console.log("this is 1");
-  //
-  // document.getElementById("output").innerHTML = 0;
-  // });
-
-
-  // document.getElementById("output").innerHTML = 0;
+let equalsButton = document.getElementById("operatorEquation");
+equalsButton.addEventListener("click", function() {
+  clickedEquals();
+});
