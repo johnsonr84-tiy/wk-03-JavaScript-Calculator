@@ -25,13 +25,28 @@ function doOperation() {
     savedNumber = savedNumber + currentNumber;
   }
   else if(operation === "multiply") {
-    console.log("adding")
+    console.log("mutiply")
     savedNumber = savedNumber * currentNumber;
   }
+  else if(operation === "divide") {
+    console.log("divide")
+    savedNumber = savedNumber / currentNumber;
+  }
+  else if(operation === "subtract") {
+    console.log("subtract")
+    savedNumber = savedNumber - currentNumber;
+  }
+  else if(operation === "percent") {
+    console.log("percent")
+    savedNumber = savedNumber % currentNumber;
+  }
+
   display.innerHTML = savedNumber
   shouldReset = true;
 }
 
+
+//click functions for simple math
 function clickedDivide() {
   if(shouldReset) {
     operation = "divide";
@@ -42,14 +57,14 @@ function clickedDivide() {
   operation = "divide";
 }
 
-function clickedMinus() {
+function clickedSubtract() {
   if(shouldReset) {
-    operation = "minus";
+    operation = "subtract";
     return
   }
 
   doOperation();
-  operation = "minus";
+  operation = "subtract";
 }
 
 function clickedPlus() {
@@ -82,6 +97,16 @@ function clickedEquals() {
   operation = "";
 }
 
+function clickedPercentage() {
+  if(shouldReset) {
+    operation = "percent";
+    return
+  }
+
+  doOperation();
+  operation = "percent";
+}
+
 
 for(let i = 0; i <= 9; i++) {
   let id = "number" + i;
@@ -101,7 +126,22 @@ timesButton.addEventListener("click", function() {
   clickedTimes();
 });
 
+let divideButton = document.getElementById("operatorDivide");
+divideButton.addEventListener("click", function() {
+  clickedDivide();
+});
+
+let subtractButton = document.getElementById("operatorSubtract");
+subtractButton.addEventListener("click", function() {
+  clickedSubtract();
+});
+
 let equalsButton = document.getElementById("operatorEquation");
 equalsButton.addEventListener("click", function() {
   clickedEquals();
+});
+
+let percentButton = document.getElementById("percent");
+percentButton.addEventListener("click", function() {
+  clickedPercent();
 });
