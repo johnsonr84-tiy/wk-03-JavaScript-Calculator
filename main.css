@@ -30,9 +30,8 @@ body {
   align-items: center;
 }
 
-.buttons {
-  position: relative;
-  text-align: center;
+#buttons {
+  /*position: relative;*/
   align-items: center;
 }
 
@@ -47,7 +46,6 @@ body {
   border-radius: 15px;
   align-items: center;
   top: 1rem;
-  /*left: 1.25rem;*/
 }
 
 #clear {
@@ -89,7 +87,7 @@ body {
   margin: 0px;
 }
 
-#numberSeven {
+#number7 {
   background-color: white;
   height: 5rem;
   width: 5rem;
@@ -99,7 +97,7 @@ body {
   margin: 0px;
 }
 
-#numberEight {
+#number8 {
   background-color: white;
   height: 5rem;
   width: 5rem;
@@ -109,7 +107,7 @@ body {
   margin: 0px;
 }
 
-#numberNine {
+#number9 {
   background-color: white;
   height: 5rem;
   width: 5rem;
@@ -139,7 +137,7 @@ body {
   margin: 0px;
 }
 
-#numberFour {
+#number4 {
   background-color: white;
   height: 5rem;
   width: 5rem;
@@ -149,7 +147,7 @@ body {
   margin: 0px;
 }
 
-#numberFive {
+#number5 {
   background-color: white;
   height: 5rem;
   width: 5rem;
@@ -159,7 +157,7 @@ body {
   margin: 0px;
 }
 
-#numberSix {
+#number6 {
   background-color: white;
   height: 5rem;
   width: 5rem;
@@ -179,7 +177,7 @@ body {
   margin: 0px;
 }
 
-#numberOne {
+#number1 {
   background-color: white;
   height: 5rem;
   width: 5rem;
@@ -189,7 +187,7 @@ body {
   margin: 0px;
 }
 
-#numberTwo {
+#number2 {
   background-color: white;
   height: 5rem;
   width: 5rem;
@@ -199,7 +197,7 @@ body {
   margin: 0px;
 }
 
-#numberThree {
+#number3 {
   background-color: white;
   height: 5rem;
   width: 5rem;
@@ -219,7 +217,7 @@ body {
   margin: 0px;
 }
 
-#numberZero {
+#number0 {
   background-color: white;
   height: 5rem;
   width: 10.5rem;
