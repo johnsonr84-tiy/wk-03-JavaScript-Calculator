@@ -16,9 +16,22 @@ function clickedNumber(x) {
 function doOperation() {
   let display = document.getElementById("display");
   let currentNumber = parseInt(display.innerHTML);
-
   if(operation === "") {
     savedNumber = currentNumber
+  }
+
+
+  else if(operation === "clear") {
+    console.log("clear")
+    savedNumber = savedNumber + currentNumber;
+  }
+  else if(operation === "+/-") {
+    console.log("+/-")
+    savedNumber = savedNumber + currentNumber;
+  }
+  else if(operation === "percent") {
+    console.log("percent")
+    savedNumber = savedNumber % currentNumber;
   }
   else if(operation === "add") {
     console.log("adding")
@@ -36,14 +49,12 @@ function doOperation() {
     console.log("subtract")
     savedNumber = savedNumber - currentNumber;
   }
-  else if(operation === "percent") {
-    console.log("percent")
-    savedNumber = savedNumber % currentNumber;
-  }
 
   display.innerHTML = savedNumber
   shouldReset = true;
 }
+
+
 
 
 //click functions for simple math
@@ -97,7 +108,27 @@ function clickedEquals() {
   operation = "";
 }
 
-function clickedPercentage() {
+function clickedclear() {
+  if(shouldReset) {
+    operation = "";
+    return
+  }
+
+  doOperation();
+  operation = "";
+}
+
+function clickedPlus_Minus() {
+  if(shouldReset) {
+    operation = "plusMinus";
+    return
+  }
+
+  doOperation();
+  operation = "plusMinus";
+}
+
+function clickedPercent() {
   if(shouldReset) {
     operation = "percent";
     return
@@ -141,7 +172,17 @@ equalsButton.addEventListener("click", function() {
   clickedEquals();
 });
 
-let percentButton = document.getElementById("percent");
+clearButton = document.getElementById("operatorClear");
+clearButton.addEventListener("click", function() {
+  clickedClear();
+});
+
+let percentButton = document.getElementById("operatorPercent");
 percentButton.addEventListener("click", function() {
+  clickedPercent();
+});
+
+let plus_minusButton = document.getElementById("plusMinus");
+plusMinusButton.addEventListener("click", function() {
   clickedPercent();
 });

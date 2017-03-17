@@ -1,18 +1,23 @@
 html, body {
   font-size: 16px;
   align-items: center;
+  align-content: center;
 }
 
 body {
-    background-color: grey;
+    /*background-color: grey;*/
     font-size: 18px;
     font-family: arial;
     align-items: center;
+    background-image: url("./images/galaxy.jpg");
 }
 
-#h1 {
-  font-size: 50px;
+h1 {
+  font-size: 30px;
   font-family: arial;
+  color: white;
+  align-items: center;
+  align-content: center;
 }
 
 .row1, .row2, .row3, .row4, .row5 {
@@ -23,7 +28,7 @@ body {
 
 #calc {
   background-color: black;
-  border: 1px solid black;
+  border: 1px solid white;
   height: 37rem;
   width: 24rem;
   border-radius: 15px;
@@ -46,18 +51,20 @@ body {
   border-radius: 15px;
   align-items: center;
   top: 1rem;
+  color: darkblue;
 }
 
-#clear {
+#operatorClear {
   background-color: lightgrey;
   height: 5rem;
   width: 5rem;
   text-align: center;
   font-size: 35px;
   border-radius: 10px;
+  color: purple;
 }
 
-#plusMinus {
+#operatorPlus_Minus {
   background-color: lightgrey;
   height: 5rem;
   width: 5rem;
@@ -65,9 +72,10 @@ body {
   font-size: 30px;
   border-radius: 10px;
   margin: 0px;
+  color: purple;
 }
 
-#percent {
+#operatorPercent {
   background-color: lightgrey;
   height: 5rem;
   width: 5rem;
@@ -75,16 +83,18 @@ body {
   font-size: 30px;
   border-radius: 10px;
   margin: 0px;
+  color: purple;
 }
 
 #operatorDivide {
-  background-color: orange;
+  background-color: purple;
   height: 5rem;
   width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
   margin: 0px;
+  color: white;
 }
 
 #number7 {
@@ -118,23 +128,25 @@ body {
 }
 
 #operatorMultiply {
-  background-color: orange;
+  background-color: purple;
   height: 5rem;
   width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
   margin: 0px;
+  color: white;
 }
 
 #operatorDivide {
-  background-color: orange;
+  background-color: purple;
   height: 5rem;
   width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
   margin: 0px;
+  color: white;
 }
 
 #number4 {
@@ -168,13 +180,14 @@ body {
 }
 
 #operatorSubtract {
-  background-color: orange;
+  background-color: purple;
   height: 5rem;
   width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
   margin: 0px;
+  color: white;
 }
 
 #number1 {
@@ -208,13 +221,14 @@ body {
 }
 
 #operatorPlus {
-  background-color: orange;
+  background-color: purple;
   height: 5rem;
   width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
   margin: 0px;
+  color: white;
 }
 
 #number0 {
@@ -238,11 +252,12 @@ body {
 }
 
 #operatorEquation {
-  background-color: orange;
+  background-color: purple;
   height: 5rem;
   width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
   margin: 0px;
+  color: white;
 }
