@@ -19,8 +19,9 @@ function Divide(a, b) {
   return a / b;
 }
 
-function Percent(a, b) {
-  return a % b;
+function Modulus(a, b) {
+  let c = (a, b) *0.01;
+  return c;
 }
 
 function numToString(clicked_id) {
@@ -41,35 +42,35 @@ function equalButton() {
   console.log(Input);
   let a = parseFloat(Input[0]);
   let b = parseFloat(Input[2]);
-  if (Input[1] == '+') {
+  if (Input[1] == "+") {
     Calculate(a, b, Add);
     document.querySelector(".display").innerHTML = Calculate(a, b, Add);
     inputString = Calculate(a, b, Add);
     console.log(Calculate(a, b, Add));
   }
-  if (Input[1] == '−') {
+  if (Input[1] == "−") {
     Calculate(a, b, Subtract);
     document.querySelector(".display").innerHTML = Calculate(a, b, Subtract);
     inputString = Calculate(a, b, Subtract);
     console.log(Calculate(a, b, Subtract));
   }
-  if (Input[1] == '*') {
+  if (Input[1] == "*") {
     Calculate(a, b, Multiply);
     document.querySelector(".display").innerHTML = Calculate(a, b, Multiply);
     inputString = Calculate(a, b, Multiply);
     console.log(Calculate(a, b, Multiply));
   }
-  if (Input[1] == '/') {
+  if (Input[1] == "/") {
     Calculate(a, b, Divide);
     document.querySelector(".display").innerHTML = Calculate(a, b, Divide);
-    inputString = calcCalculate(a, b, Divide);
+    inputString = Calculate(a, b, Divide);
     console.log(Calculate(a, b, Divide));
   }
-  if (Input[1] == '%') {
-    Calculate(a, b, Percent);
-    document.querySelector(".display").innerHTML = Calculate(a, b, Percent);
-    inputString = Calculate(a, b, Percent);
-    console.log(Calculate(a, b, Percent));
+  if (Input[1] == "%") {
+    Calculate(a, b, Modulus);
+    document.querySelector(".display").innerHTML = Calculate(a, b, Mudulus);
+    inputString = Calculate(a, b, Modulus);
+    console.log(Calculate(a, b, Modulus));
   }
   console.log(inputString);
   console.log(Input);
