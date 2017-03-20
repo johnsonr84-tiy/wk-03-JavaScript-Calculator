@@ -16,8 +16,6 @@ function clickedNumber(x) {
 function doOperation() {
   let display = document.getElementById("display");
   let currentNumber = parseInt(display.innerHTML);
-  if(operation === "") {
-    savedNumber = currentNumber
   }
 
 
@@ -50,8 +48,6 @@ function doOperation() {
     savedNumber = savedNumber - currentNumber;
   }
 
-  display.innerHTML = savedNumber
-  shouldReset = true;
 }
 
 

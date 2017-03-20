@@ -1,93 +1,93 @@
 html, body {
+  /*position: relative;*/
   font-size: 16px;
-  align-items: center;
-  align-content: center;
 }
 
 body {
-    /*background-color: grey;*/
     font-size: 18px;
     font-family: arial;
-    align-items: center;
     background-image: url("./images/galaxy.jpg");
 }
 
 h1 {
+  position: relative;
   font-size: 30px;
   font-family: arial;
-  color: white;
+  color: orange;
   align-items: center;
   align-content: center;
+  left: 30%;
 }
 
-.row1, .row2, .row3, .row4, .row5 {
+.row1 {
   position: relative;
-  float: center;
-  align-items: center;
+  right: 3%;
+}
+
+.row2 {
+  position: relative;
+  right: 3%;
+}
+.row3 {
+  position: relative;
+  left: 0%;
+}
+ .row4 {
+   position: relative;
+   left: 0%;
+ }
+  .row5 {
+    position: relative;
+    right: 0%;
 }
 
 #calc {
-  background-color: black;
-  border: 1px solid white;
+  position: relative;
+  background-color: inherit;
+  border: 4px solid white;
   height: 37rem;
   width: 24rem;
   border-radius: 15px;
-  align-items: center;
+  left: 31%;
+  top:30%
 }
 
-#buttons {
-  /*position: relative;*/
-  align-items: center;
-}
-
-#display {
+.button {
   position: relative;
-  background-color: white;
-  border: 1px solid orange;
-  font-size: 40px;
+  align-items: center;
+}
+
+.display {
+  position: relative;
+  background-color: inherit;
+  border: 3px solid white;
+  font-size: 60px;
   text-align: right;
   height: 5rem;
   width: 21rem;
   border-radius: 15px;
   align-items: center;
+  align-items: center;
+  align-self: center;
   top: 1rem;
-  color: darkblue;
+  color: white;
+  left: 6%;
 }
 
-#operatorClear {
-  background-color: lightgrey;
+.autoClear {
+  background-color: inherit;
+  border: 3px solid white;
   height: 5rem;
   width: 5rem;
   text-align: center;
   font-size: 35px;
   border-radius: 10px;
-  color: purple;
+  color: white;
 }
 
-#operatorPlus_Minus {
-  background-color: lightgrey;
-  height: 5rem;
-  width: 5rem;
-  text-align: center;
-  font-size: 30px;
-  border-radius: 10px;
-  margin: 0px;
-  color: purple;
-}
-
-#operatorPercent {
-  background-color: lightgrey;
-  height: 5rem;
-  width: 5rem;
-  text-align: center;
-  font-size: 30px;
-  border-radius: 10px;
-  margin: 0px;
-  color: purple;
-}
-
-#operatorDivide {
-  background-color: purple;
+.operatorPlusMinus {
+  background-color: inherit;
+  border: 3px solid white;
   height: 5rem;
   width: 5rem;
   text-align: center;
@@ -97,38 +97,9 @@ h1 {
   color: white;
 }
 
-#number7 {
-  background-color: white;
-  height: 5rem;
-  width: 5rem;
-  text-align: center;
-  font-size: 30px;
-  border-radius: 10px;
-  margin: 0px;
-}
-
-#number8 {
-  background-color: white;
-  height: 5rem;
-  width: 5rem;
-  text-align: center;
-  font-size: 30px;
-  border-radius: 10px;
-  margin: 0px;
-}
-
-#number9 {
-  background-color: white;
-  height: 5rem;
-  width: 5rem;
-  text-align: center;
-  font-size: 30px;
-  border-radius: 10px;
-  margin: 0px;
-}
-
-#operatorMultiply {
-  background-color: purple;
+.operatorPercent {
+  background-color: inherit;
+  border: 3px solid white;
   height: 5rem;
   width: 5rem;
   text-align: center;
@@ -138,8 +109,9 @@ h1 {
   color: white;
 }
 
-#operatorDivide {
-  background-color: purple;
+.operatorDivide {
+  background-color: inherit;
+  border: 3px solid white;
   height: 5rem;
   width: 5rem;
   text-align: center;
@@ -149,38 +121,9 @@ h1 {
   color: white;
 }
 
-#number4 {
-  background-color: white;
-  height: 5rem;
-  width: 5rem;
-  text-align: center;
-  font-size: 30px;
-  border-radius: 10px;
-  margin: 0px;
-}
-
-#number5 {
-  background-color: white;
-  height: 5rem;
-  width: 5rem;
-  text-align: center;
-  font-size: 30px;
-  border-radius: 10px;
-  margin: 0px;
-}
-
-#number6 {
-  background-color: white;
-  height: 5rem;
-  width: 5rem;
-  text-align: center;
-  font-size: 30px;
-  border-radius: 10px;
-  margin: 0px;
-}
-
-#operatorSubtract {
-  background-color: purple;
+.number7 {
+  background-color: inherit;
+  border: 3px solid white;
   height: 5rem;
   width: 5rem;
   text-align: center;
@@ -190,38 +133,9 @@ h1 {
   color: white;
 }
 
-#number1 {
-  background-color: white;
-  height: 5rem;
-  width: 5rem;
-  text-align: center;
-  font-size: 30px;
-  border-radius: 10px;
-  margin: 0px;
-}
-
-#number2 {
-  background-color: white;
-  height: 5rem;
-  width: 5rem;
-  text-align: center;
-  font-size: 30px;
-  border-radius: 10px;
-  margin: 0px;
-}
-
-#number3 {
-  background-color: white;
-  height: 5rem;
-  width: 5rem;
-  text-align: center;
-  font-size: 30px;
-  border-radius: 10px;
-  margin: 0px;
-}
-
-#operatorPlus {
-  background-color: purple;
+.number8 {
+  background-color: inherit;
+  border: 3px solid white;
   height: 5rem;
   width: 5rem;
   text-align: center;
@@ -231,28 +145,166 @@ h1 {
   color: white;
 }
 
-#number0 {
-  background-color: white;
+.number9 {
+  background-color: inherit;
+  border: 3px solid white;
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 0px;
+  color: white;
+}
+
+.operatorMultiply {
+  background-color: inherit;
+  border: 3px solid white;
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 0px;
+  color: white;
+}
+
+.operatorDivide {
+  background-color: inherit;
+  border: 3px solid white;
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 0px;
+  color: white;
+}
+
+.number4 {
+  background-color: inherit;
+  border: 3px solid white;
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 0px;
+  color: white;
+}
+
+.number5 {
+  background-color: inherit;
+  border: 3px solid white;
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 0px;
+  color: white;
+}
+
+.number6 {
+  background-color: inherit;
+  border: 3px solid white;
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 0px;
+  color: white;
+}
+
+.operatorSubtract {
+  background-color: inherit;
+  border: 3px solid white;
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 0px;
+  color: white;
+}
+
+.number1 {
+  background-color: inherit;
+  border: 3px solid white;
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 0px;
+  color: white;
+}
+
+.number2 {
+  background-color: inherit;
+  border: 3px solid white;
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 0px;
+  color: white;
+}
+
+.number3 {
+  background-color: inherit;
+  border: 3px solid white;
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 0px;
+  color: white;
+}
+
+.operatorPlus {
+  background-color: inherit;
+  border: 3px solid white;
+  border: 3px solid white;
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 0px;
+  color: white;
+}
+
+.numberNil {
+  background-color: inherit;
+  border: 3px solid white;
   height: 5rem;
   width: 10.5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
   margin: 0px;
+  color: white;
 }
 
-#operatorDot {
-  background-color: white;
+.operatorDot {
+  background-color: inherit;
+  border: 3px solid white;
   height: 5rem;
   width: 5rem;
   text-align: center;
   font-size: 30px;
   border-radius: 10px;
   margin: 0px;
+  color: white;
 }
 
-#operatorEquation {
-  background-color: purple;
+#equalButton {
+  background-color: inherit;
+  border: 3px solid white;
   height: 5rem;
   width: 5rem;
   text-align: center;

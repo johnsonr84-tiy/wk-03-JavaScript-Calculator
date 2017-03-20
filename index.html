@@ -12,51 +12,51 @@
   <h1>Codedork Cosmic Calculator</h1>
 
 	<div id="calc">
-    <div id="display"></div>
-  	<div id="buttons">
+    <div class="display"></div>
+  	<div id="button">
         <div class="row1">
         <ul>
-          <button class="operatorClear" value="0" onclick="clickedOperator(value)">AC</button>
-          <button class="operatorPlus_Minus" value="+/-" onclick="clickedOperator(value)">+/-</button>
-      		<button class="operatorPercent" value="%" onclick="clickedOperator(value)">%</button>
-          <button class="operatorDivide" value="" onclick="clickedOperator(value)">/</button>
+          <button id="" class="autoClear" onclick="window.location.reload()" type="button" name="clear">A/C</button>
+      		<button id="%" class="operatorPercent" onclick="operToString(this.id)" type="button" name="percent">%</button>
+      		<button id="+/-" class="operatorPlusMinus" onclick="operToString(this.id)" type="button" name="remainder">+/-</button>
+          <button id="/" class="operatorDivide" onclick="operToString(this.id)" type="button" name="divide">/</button>
         </ul>
         </div>
         <div class="row2">
         <ul>
-          <button class="number7" value="7" onclick="clickedNumber(value)">7</button>
-          <button class="number8" value="8" onclick="clickedNumber(value)">8</button>
-      		<button class="number9" value="9" onclick="clickedNumber(value)">9</button>
-          <button class="operatorMultiply" value="" onclick="clickedOperator(value)">*</button>
+          <button id="7" class="number7" onclick="numToString(this.id)" type="button" name="seven">7</button>
+          <button id="8" class="number8" onclick="numToString(this.id)" type="button" name="eight">8</button>
+      		<button id="9" class="number9" onclick="numToString(this.id)" type="button" name="nine">9</button>
+          <button id="*" class="operatorMultiply" onclick="operToString(this.id)" type="button" name="multiply">*</button>
         </ul>
         <div class="row3">
         <ul>
-          <button class="number4" value="4" onclick="clickedNumber(value)">4</button>
-          <button class="number5" value="5" onclick="clickedNumber(value)">5</button>
-          <button class="number6" value="6" onclick="clickedNumber(value)">6</button>
-          <button class="operatorSubtract" value="" onclick="clickedOperator(value)">-</button>
+          <button id="4" class="number4" onclick="numToString(this.id)" type="button" name="four">4</button>
+          <button id="5" class="number5" onclick="numToString(this.id)" type="button" name="five">5</button>
+          <button id="6" class="number6" onclick="numToString(this.id)" type="button" name="six">6</button>
+          <button id="−" class="operatorSubtract" onclick="operToString(this.id)" type="button" name="subtract">-</button>
         </ul>
         <div class="row4">
         <ul>
-      		<button class="number1" value="1" onclick="clickedNumber(value)">1</button>
-      		<button class="number2" value="2" onclick="clickedNumber(value)">2</button>
-      		<button class="number3" value="3" onclick="clickedNumber(value)">3</button>
-          <button class="operatorPlus" value="" onclick="clickedOperator(value)">+</button>
+      		<button id="1" class="number1" onclick="numToString(this.id)" type="button">1</button>
+      		<button id="2" class="number2" onclick="numToString(this.id)" type="button" name="two">2</button>
+      		<button id="3" class="number3" onclick="numToString(this.id)" type="button" name="three">3</button>
+          <button id="+" class="operatorPlus" onclick="operToString(this.id)" type="button" name="add">+</button>
         </ul>
         </div>
         <div class="row5">
         <ul>
-          <button class="number0" value="0" onclick="clickedNumber(value)">0</button>
-          <button class="operatorDot" value=".num1" onclick="clickedOperator(value)">.</button>
-      		<button class="operatorEquation" value="=" onclick="clickedOperator(value)">=</button>
+          <button id="0" class="numberNil" onclick="numToString(this.id)" type="button" name="">0</button>
+          <button id="." class="operatorDot" onclick="numToString(this.id)" type="button" name="decimal">.</button>
+      		<button id="equalButton" onclick="equalButton()" type="button" name="equals">=</button>
         </ul>
         </div>
       </div>
     </div>
   </div>
 
-  <script src="./main.js"></script>
+  <script src="./callback.js"></script>
 
-</div>
+  </div>
   </body>
 </html>
