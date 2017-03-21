@@ -38,14 +38,6 @@ const calc = (function() {
     document.querySelector(".display").innerHTML = inputString;
   };
 
-  (function() {
-    const button =  document.querySelector("#equalButton");
-    console.log("the roof is on fire", button);
-    button.addEventListener("click", function() {
-      equalButton(button.value);
-    })
-  })();
-
   const equalButton = function() {
     input = inputString.split(" ");
     console.log(input);
@@ -67,7 +59,7 @@ const calc = (function() {
     if (input[1] == "*") {
       calculate(a, b, multiply);
       document.querySelector(".display").innerHTML = calculate(a, b, multiply);
-      inputString = caculate(a, b, multiply);
+      inputString = calculate(a, b, multiply);
       console.log(calculate(a, b, multiply));
     };
     if (input[1] == "/") {
@@ -91,7 +83,15 @@ const calc = (function() {
     console.log(cb(a,b));
   };
 
-  (function () {
+  function addListenerForEquals() {
+    const button =  document.querySelector("#equalButton");
+    console.log("the roof is on fire", button);
+    button.addEventListener("click", function() {
+      equalButton(button.value);
+    })
+  };
+
+  function addListenerForNumbers() {
     const buttons = document.querySelectorAll(".number")
     console.log("buttons are:", buttons)
     for(let i = 0; i < buttons.length; i++) {
@@ -100,19 +100,22 @@ const calc = (function() {
       button.addEventListener("click", function() {
         numToString(button.value);
       });
-    }
+    };
+  };
 
-  })();
-
-  (function () {
+  function addListenerForOperators() {
     const buttons = document.querySelectorAll(".operator")
     for(let i = 0; i < buttons.length; i++) {
       let button = buttons[i];
       button.addEventListener("click", function() {
         operToString(button.value);
       });
-    }
-  })();
+    };
+  };
+
+  addListenerForEquals()
+  addListenerForNumbers()
+  addListenerForOperators()
 
   return {
     add: add,
