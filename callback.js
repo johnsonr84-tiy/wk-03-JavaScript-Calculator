@@ -1,5 +1,5 @@
 // Calc Functions redone with callbacks
-const onLoad = (function() {
+const calc = (function() {
 
   // const button = document.querySelectorAll('input[type=button]')
   var input = [];
@@ -37,6 +37,14 @@ const onLoad = (function() {
     console.log(inputString);
     document.querySelector(".display").innerHTML = inputString;
   };
+
+  (function() {
+    const button =  document.querySelector("#equalButton");
+    console.log("the roof is on fire", button);
+    button.addEventListener("click", function() {
+      equalButton(button.value);
+    })
+  })();
 
   const equalButton = function() {
     input = inputString.split(" ");
@@ -85,8 +93,10 @@ const onLoad = (function() {
 
   (function () {
     const buttons = document.querySelectorAll(".number")
+    console.log("buttons are:", buttons)
     for(let i = 0; i < buttons.length; i++) {
       let button = buttons[i];
+      console.log("button is:", button)
       button.addEventListener("click", function() {
         numToString(button.value);
       });
@@ -109,7 +119,7 @@ const onLoad = (function() {
     subtract: subtract,
     multiply: multiply,
     divide: divide,
-    mudulos: modulus,
+    modulus: modulus,
     numToString: numToString,
     operToString: operToString,
     equalButton: equalButton,
@@ -118,5 +128,5 @@ const onLoad = (function() {
 
 })();
 
-module.export = onLoad;
-window.onload = onLoad;
+module.export = calc;
+window.onload = calc;
