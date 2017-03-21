@@ -1,82 +1,122 @@
 // Calc Functions redone with callbacks
+const onLoad = (function() {
 
-var Input = [];
-var inputString = "";
+  // const button = document.querySelectorAll('input[type=button]')
+  var input = [];
+  var inputString = "";
 
-function Add(a, b) {
-  return a + b;
-}
+  const add = function(a, b) {
+    return a + b;
+  };
 
-function Subtract(a, b) {
-  return a - b;
-}
+  const subtract = function(a, b) {
+    return a - b;
+  };
 
-function Multiply(a, b) {
-  return a * b;
-}
+  const multiply = function(a, b) {
+    return a * b;
+  };
 
-function Divide(a, b) {
-  return a / b;
-}
+  const divide = function(a, b) {
+    return a / b;
+  };
 
-function Modulus(a, b) {
-  let c = (a, b) *0.01;
-  return c;
-}
-
-function numToString(clicked_id) {
-  inputString += clicked_id;
-  console.log(inputString);
-  document.querySelector(".display").innerHTML = inputString;
-}
-
-function operToString(clicked_id) {
-  inputString += " " + clicked_id + " ";
-  console.log(inputString);
-  document.querySelector(".display").innerHTML = inputString;
-}
+  const modulus = function(a, b) {
+    return a % b;
+  };
 
 
-function equalButton() {
-  Input = inputString.split(" ");
-  console.log(Input);
-  let a = parseFloat(Input[0]);
-  let b = parseFloat(Input[2]);
-  if (Input[1] == "+") {
-    Calculate(a, b, Add);
-    document.querySelector(".display").innerHTML = Calculate(a, b, Add);
-    inputString = Calculate(a, b, Add);
-    console.log(Calculate(a, b, Add));
+  const numToString = function(clicked_id) {
+    inputString += clicked_id;
+    console.log(inputString);
+    document.querySelector(".display").innerHTML = inputString;
+  };
+
+  const operToString = function(clicked_id) {
+    inputString += " " + clicked_id + " ";
+    console.log(inputString);
+    document.querySelector(".display").innerHTML = inputString;
+  };
+
+  const equalButton = function() {
+    input = inputString.split(" ");
+    console.log(input);
+    let a = parseFloat(input[0]);
+    let b = parseFloat(input[2]);
+
+    if (input[1] == "+") {
+      calculate(a, b, add);
+      document.querySelector(".display").innerHTML = calculate(a, b, add);
+      inputString = calculate(a, b, add);
+      console.log(calculate(a, b, add));
+    };
+    if (input[1] == "−") {
+      calculate(a, b, subtract);
+      document.querySelector(".display").innerHTML = calculate(a, b, subtract);
+      inputString = calculate(a, b, subtract);
+      console.log(calculate(a, b, subtract));
+    };
+    if (input[1] == "*") {
+      calculate(a, b, multiply);
+      document.querySelector(".display").innerHTML = calculate(a, b, multiply);
+      inputString = caculate(a, b, multiply);
+      console.log(calculate(a, b, multiply));
+    };
+    if (input[1] == "/") {
+      calculate(a, b, divide);
+      document.querySelector(".display").innerHTML = calculate(a, b, divide);
+      inputString = calculate(a, b, divide);
+      console.log(calculate(a, b, divide));
+    };
+    if (input[1] == "%") {
+      calculate(a, b, Modulus);
+      document.querySelector(".display").innerHTML = calculate(a, b, modulus);
+      inputString = calculate(a, b, modulus);
+      console.log(calculate(a, b, modulus));
+    };
+    console.log(inputString);
+    console.log(input);
+  };
+
+  const calculate = function(a, b, cb) {
+    return cb(a, b);
+    console.log(cb(a,b));
+  };
+
+  (function () {
+    const buttons = document.querySelectorAll(".number")
+    for(let i = 0; i < buttons.length; i++) {
+      let button = buttons[i];
+      button.addEventListener("click", function() {
+        numToString(button.value);
+      });
+    }
+
+  })();
+
+  (function () {
+    const buttons = document.querySelectorAll(".operator")
+    for(let i = 0; i < buttons.length; i++) {
+      let button = buttons[i];
+      button.addEventListener("click", function() {
+        operToString(button.value);
+      });
+    }
+  })();
+
+  return {
+    add: add,
+    subtract: subtract,
+    multiply: multiply,
+    divide: divide,
+    mudulos: modulus,
+    numToString: numToString,
+    operToString: operToString,
+    equalButton: equalButton,
+    calculate: calculate
   }
-  if (Input[1] == "−") {
-    Calculate(a, b, Subtract);
-    document.querySelector(".display").innerHTML = Calculate(a, b, Subtract);
-    inputString = Calculate(a, b, Subtract);
-    console.log(Calculate(a, b, Subtract));
-  }
-  if (Input[1] == "*") {
-    Calculate(a, b, Multiply);
-    document.querySelector(".display").innerHTML = Calculate(a, b, Multiply);
-    inputString = Calculate(a, b, Multiply);
-    console.log(Calculate(a, b, Multiply));
-  }
-  if (Input[1] == "/") {
-    Calculate(a, b, Divide);
-    document.querySelector(".display").innerHTML = Calculate(a, b, Divide);
-    inputString = Calculate(a, b, Divide);
-    console.log(Calculate(a, b, Divide));
-  }
-  if (Input[1] == "%") {
-    Calculate(a, b, Modulus);
-    document.querySelector(".display").innerHTML = Calculate(a, b, Mudulus);
-    inputString = Calculate(a, b, Modulus);
-    console.log(Calculate(a, b, Modulus));
-  }
-  console.log(inputString);
-  console.log(Input);
-}
 
-function Calculate(a, b, cb) {
-  return cb(a, b);
-  console.log(cb(a,b));
-}
+})();
+
+module.export = onLoad;
+window.onload = onLoad;

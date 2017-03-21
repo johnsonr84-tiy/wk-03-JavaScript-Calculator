@@ -16,46 +16,46 @@
   	<div id="button">
         <div class="row1">
         <ul>
-          <button id="" class="autoClear" onclick="window.location.reload()" type="button" name="clear">A/C</button>
-      		<button id="%" class="operatorModulus" onclick="operToString(this.id)" type="button" name="modulus">%</button>
-      		<button id="+/-" class="operatorPlusMinus" onclick="operToString(this.id)" type="button" name="remainder">+/-</button>
-          <button id="/" class="operatorDivide" onclick="operToString(this.id)" type="button" name="divide">/</button>
+          <button id="" class="autoClear" onclick="window.location.reload(0)" type="button">A/C</button>
+      		<button id="%" class="operator" type="button" value="%" >%</button>
+      		<button id="+/-" class="operator" type="button" value="+/-" >+/-</button>
+          <button id="/" class="operator" type="button" value="/">/</button>
         </ul>
         </div>
         <div class="row2">
         <ul>
-          <button id="7" class="number7" onclick="numToString(this.id)" type="button" name="seven">7</button>
-          <button id="8" class="number8" onclick="numToString(this.id)" type="button" name="eight">8</button>
-      		<button id="9" class="number9" onclick="numToString(this.id)" type="button" name="nine">9</button>
-          <button id="*" class="operatorMultiply" onclick="operToString(this.id)" type="button" name="multiply">*</button>
+          <button id="7" class="number" type="button" value="7">7</button>
+          <button id="8" class="number" type="button" value="8">8</button>
+      		<button id="9" class="number" type="button" value="9">9</button>
+          <button id="*" class="operator" type="button" value="*">*</button>
         </ul>
         <div class="row3">
         <ul>
-          <button id="4" class="number4" onclick="numToString(this.id)" type="button" name="four">4</button>
-          <button id="5" class="number5" onclick="numToString(this.id)" type="button" name="five">5</button>
-          <button id="6" class="number6" onclick="numToString(this.id)" type="button" name="six">6</button>
-          <button id="−" class="operatorSubtract" onclick="operToString(this.id)" type="button" name="subtract">-</button>
+          <button id="4" class="number" type="button" value="4">4</button>
+          <button id="5" class="number" type="button" value="5">5</button>
+          <button id="6" class="number" type="button" value="6">6</button>
+          <button id="−" class="operator" type="button" value="-">-</button>
         </ul>
         <div class="row4">
         <ul>
-      		<button id="1" class="number1" onclick="numToString(this.id)" type="button">1</button>
-      		<button id="2" class="number2" onclick="numToString(this.id)" type="button" name="two">2</button>
-      		<button id="3" class="number3" onclick="numToString(this.id)" type="button" name="three">3</button>
-          <button id="+" class="operatorPlus" onclick="operToString(this.id)" type="button" name="add">+</button>
+      		<button id="1" class="number" type="button" value="1">1</button>
+      		<button id="2" class="number" type="button" value="2">2</button>
+      		<button id="3" class="number" type="button" value="3">3</button>
+          <button id="+" class="operator" type="button" value="+">+</button>
         </ul>
         </div>
         <div class="row5">
         <ul>
-          <button id="0" class="numberNil" onclick="numToString(this.id)" type="button" name="">0</button>
-          <button id="." class="operatorDot" onclick="numToString(this.id)" type="button" name="decimal">.</button>
-      		<button id="equalButton" onclick="equalButton()" type="button" name="equals">=</button>
+          <button id="0" class="number" type="button" value="0">0</button>
+          <button id="." class="number" type="button" value=".">.</button>
+      		<button id="equalButton" class="equals" type="button" value="=">=</button>
         </ul>
         </div>
       </div>
     </div>
   </div>
 
-  <script src="./callback.js"></script>
+  <script src="./public/bundle.js"></script>
 
   </div>
   </body>

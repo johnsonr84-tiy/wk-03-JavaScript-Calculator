@@ -182,3 +182,52 @@ let plus_minusButton = document.getElementById("plusMinus");
 plusMinusButton.addEventListener("click", function() {
   clickedPercent();
 });
+
+//
+// let clickedNumber = document.getElementById("numberNil");
+// });
+//
+// let numberOneButton = document.getElementById("numberOne");
+// numButton.addEventListener("click", function() {
+//   clickedNumber();
+// });
+//
+// let numberTwoButton = document.getElementById("numberTwo");
+// numButton.addEventListener("click", function() {
+//   clickedNumber();
+// });
+//
+// let numberThreeButton = document.getElementById("numberThree");
+// numButton.addEventListener("click", function() {
+//   clickedNumber();
+// });
+//
+// let numberFourButton = document.getElementById("numberFour");
+// numButton.addEventListener("click", function() {
+//   clickedNumber();
+// });
+//
+// let numberFiveButton = document.getElementById("numberFive");
+// numButton.addEventListener("click", function() {
+//   clickedNumber();
+// });
+//
+// let numberSixButton = document.getElementById("numberSix");
+// numButton.addEventListener("click", function() {
+//   clickedNumber();
+// });
+//
+// let numberSevenButton = document.getElementById("numberSeven");
+// numButton.addEventListener("click", function() {
+//   clickedNumber();
+// });
+//
+// let numberEightButton = document.getElementsByClassName("numberEight");
+// numButton.addEventListener("click", function() {
+//   clickedNumber();
+// });
+//
+// let number9Button = document.getElementById("numberNine");
+// numButton.addEventListener("click", function() {
+//   clickedNumber();
+// });
