@@ -43,6 +43,7 @@ const calc = (function() {
     console.log(input);
     let a = parseFloat(input[0]);
     let b = parseFloat(input[2]);
+    let c = parseFloat(input[2]);
 
     if (input[1] == "+") {
       calculate(a, b, add);
@@ -69,10 +70,19 @@ const calc = (function() {
       console.log(calculate(a, b, divide));
     };
     if (input[1] == "%") {
-      calculate(a, b, Modulus);
-      document.querySelector(".display").innerHTML = calculate(a, b, modulus);
-      inputString = calculate(a, b, modulus);
-      console.log(calculate(a, b, modulus));
+      calculate(c = a % b);
+      document.querySelector(".display").innerHTML = calculate(c);
+      inputString = calculate(a % b);
+      console.log(calculate(a % b));
+    };
+    console.log(inputString);
+    console.log(input);
+  };
+  //   if (input[1] == "+/-") {
+  //     calculate(a, b, +/-);
+  //     document.querySelector(".display").innerHTML = calculate(a, b, +/-);
+  //     inputString = calculate(a, b, *-1);
+  //     console.log(calculate(a, b, *-1));
     };
     console.log(inputString);
     console.log(input);
@@ -88,7 +98,7 @@ const calc = (function() {
     console.log("the roof is on fire", button);
     button.addEventListener("click", function() {
       equalButton(button.value);
-    })
+    });
   };
 
   function addListenerForNumbers() {
