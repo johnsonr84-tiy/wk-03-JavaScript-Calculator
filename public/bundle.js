@@ -125,6 +125,10 @@ const calc = (function() {
     return a % b;
   };
 
+  const invert = function(b) {
+    return b * -1;
+  }
+
 
   const numToString = function(clicked_id) {
     inputString += clicked_id;
@@ -144,38 +148,27 @@ const calc = (function() {
     let a = parseFloat(input[0]);
     let b = parseFloat(input[2]);
 
+    let operator
     if (input[1] == "+") {
-      calculate(a, b, add);
-      document.querySelector(".display").innerHTML = calculate(a, b, add);
-      inputString = calculate(a, b, add);
-      console.log(calculate(a, b, add));
-    };
-    if (input[1] == "−") {
-      calculate(a, b, subtract);
-      document.querySelector(".display").innerHTML = calculate(a, b, subtract);
-      inputString = calculate(a, b, subtract);
-      console.log(calculate(a, b, subtract));
-    };
-    if (input[1] == "*") {
-      calculate(a, b, multiply);
-      document.querySelector(".display").innerHTML = calculate(a, b, multiply);
-      inputString = calculate(a, b, multiply);
-      console.log(calculate(a, b, multiply));
-    };
-    if (input[1] == "/") {
-      calculate(a, b, divide);
-      document.querySelector(".display").innerHTML = calculate(a, b, divide);
-      inputString = calculate(a, b, divide);
-      console.log(calculate(a, b, divide));
-    };
-    if (input[1] == "%") {
-      calculate(a, b, Modulus);
-      document.querySelector(".display").innerHTML = calculate(a, b, modulus);
-      inputString = calculate(a, b, modulus);
-      console.log(calculate(a, b, modulus));
-    };
-    console.log(inputString);
-    console.log(input);
+      operator = add;
+    }
+    else if (input[1] == "-") {
+      operator = subtract;
+    }
+    else if (input[1] == "*") {
+      operator = multiply;
+    }
+    else if (input[1] == "/") {
+      operator = divide;
+    }
+    else if (input[1] == "%") {
+      operator = modulus;
+    }
+    
+    let result = calculate(a, b, operator);
+    document.querySelector(".display").innerHTML = result;
+    inputString = result;
+    console.log(result);
   };
 
   const calculate = function(a, b, cb) {
@@ -185,18 +178,15 @@ const calc = (function() {
 
   function addListenerForEquals() {
     const button =  document.querySelector("#equalButton");
-    console.log("the roof is on fire", button);
     button.addEventListener("click", function() {
       equalButton(button.value);
-    })
+    });
   };
 
   function addListenerForNumbers() {
     const buttons = document.querySelectorAll(".number")
-    console.log("buttons are:", buttons)
     for(let i = 0; i < buttons.length; i++) {
       let button = buttons[i];
-      console.log("button is:", button)
       button.addEventListener("click", function() {
         numToString(button.value);
       });
