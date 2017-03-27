@@ -25,10 +25,9 @@ const calc = (function() {
     return a % b;
   };
 
-  const invert = function(b) {
-    return b * -1;
+  const invert = function(a) {
+    return a * -1;
   }
-
 
   const numToString = function(clicked_id) {
     inputString += clicked_id;
@@ -64,7 +63,7 @@ const calc = (function() {
     else if (input[1] == "%") {
       operator = modulus;
     }
-    
+
     let result = calculate(a, b, operator);
     document.querySelector(".display").innerHTML = result;
     inputString = result;
@@ -103,9 +102,24 @@ const calc = (function() {
     };
   };
 
+  function addListenerForUnaryOperators() {
+    const buttons = document.querySelectorAll(".unaryOperator")
+    for(let i = 0; i < buttons.length; i++) {
+      let button = buttons[i];
+      button.addEventListener("click", function() {
+        let value = document.querySelector(".display").innerHTML;
+        let currentNum = parseFloat(value);
+        let invertNum = invert(currentNum);
+        document.querySelector(".display").innerHTML = invertNum;
+        inputString = invertNum 
+      });
+    };
+  };
+
   addListenerForEquals()
   addListenerForNumbers()
   addListenerForOperators()
+  addListenerForUnaryOperators()
 
   return {
     add: add,
@@ -113,6 +127,7 @@ const calc = (function() {
     multiply: multiply,
     divide: divide,
     modulus: modulus,
+    invert: invert,
     numToString: numToString,
     operToString: operToString,
     equalButton: equalButton,

@@ -109,6 +109,30 @@ h1 {
   color: white;
 }
 
+.unaryOperator {
+  background-color: inherit;
+  border: 3px solid white;
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 0px;
+  color: white;
+}
+
+#zero {
+  background-color: inherit;
+  border: 3px solid white;
+  height: 5rem;
+  width: 10.25rem;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 0px;
+  color: white;
+}
+
 .operator {
   background-color: inherit;
   border: 3px solid white;
